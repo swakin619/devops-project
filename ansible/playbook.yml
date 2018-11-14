@@ -1,0 +1,9 @@
+--- 
+-  name: "Provision adobe server"
+   gather_facts: true
+   hosts: localhost
+   roles: 
+    - provisionserver
+    - apache
+    - mysqldb
+
