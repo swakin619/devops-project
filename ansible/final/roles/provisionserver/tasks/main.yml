@@ -1,0 +1,16 @@
+--- 
+
+- name: Add ppa Repository for php
+  become: yes
+  apt_repository: repo=ppa:ondrej/php
+
+- name: Install php and dependencies,mysql,apache2 and update apt package
+  apt: 
+    package:
+     - apache2
+     - python-mysqldb
+     - mysql-server
+     - php7.2
+     - libapache2-mod-php7.2
+    state: present
+    update_cache: yes
